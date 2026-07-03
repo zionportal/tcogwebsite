@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-30 pb-16 md:-mt-16">
+      <section className="relative z-30 pb-16 pt-8 md:-mt-12">
         <div className="container grid gap-3 md:grid-cols-4">
           {stats.map(({ icon: Icon, value, label, sub }) => (
             <div key={label} className="rounded-lg bg-white px-8 py-8 text-center shadow-soft">
