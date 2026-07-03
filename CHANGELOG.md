@@ -12,3 +12,4 @@
 - Applied responsive logo sizing, removed `Ministries` and `Resources` from the header menu, added the white transparent footer logo, and added low-token agent instructions for OpenCode and ChatGPT.
 - Adjusted only the hero section to better match the supplied mockup: three-line desktop headline rhythm, shorter hero height, wider image area, lower/right-shifted red and purple wave, and closer stat-card overlap.
 - Shrank the hero ribbon by tightening the red and purple wave clip paths while preserving the locked hero layout.
+- Reduced the hero ribbon by another 85% so it reads as a thin lower wave instead of a large block.
