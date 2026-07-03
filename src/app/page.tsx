@@ -18,7 +18,7 @@ import {
   Youtube
 } from "lucide-react";
 
-const nav = ["Home", "About", "Ministries", "Churches", "Events", "Resources", "Contact"];
+const nav = ["Home", "About", "Churches", "Events", "Contact"];
 
 const stats = [
   { icon: Church, value: "125+", label: "Churches", sub: "Across the Region" },
@@ -118,11 +118,11 @@ export default function Home() {
       </section>
 
       <header className="relative z-20 bg-white">
-        <div className="container flex h-28 items-center justify-between">
-          <a className="flex items-center" href="#">
-            <Image src="/assets/tcog-header-logo-transparent.png" alt="The Church of God General Headquarters logo" width={1032} height={201} className="h-auto w-[300px] object-contain md:w-[330px]" priority />
+        <div className="container flex h-24 items-center justify-between gap-6 lg:h-28">
+          <a className="flex min-w-0 items-center" href="#">
+            <Image src="/assets/tcog-header-logo-transparent.png" alt="The Church of God General Headquarters logo" width={1032} height={201} className="h-auto w-[clamp(220px,28vw,380px)] object-contain" priority />
           </a>
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-7 lg:flex">
             {nav.map((item, index) => (
               <a key={item} className={`text-[12px] font-extrabold uppercase ${index === 0 ? "border-b-2 border-gold pb-2 text-navy" : "text-deep"}`} href={`#${item.toLowerCase()}`}>
                 {item}
@@ -318,7 +318,7 @@ export default function Home() {
               ))}
             </div>
             <div className="pointer-events-none absolute right-0 top-8 hidden opacity-10 md:block">
-              <Image src="/assets/tcog-dark-logo.png" alt="" width={310} height={130} />
+              <Image src="/assets/tcog-header-logo-transparent.png" alt="" width={310} height={130} />
             </div>
           </div>
         </div>
@@ -328,7 +328,7 @@ export default function Home() {
         <div className="absolute right-0 top-0 h-7 w-64 rounded-bl-full bg-redwave" />
         <div className="container grid gap-10 pb-10 md:grid-cols-[1.5fr_0.8fr_0.8fr_1fr]">
           <div>
-            <Image src="/assets/crops/footer-logo.png" alt="The Church of God footer logo" width={360} height={94} className="h-20 w-80 object-contain object-left" />
+            <Image src="/assets/tcog-header-logo-transparent-white.png" alt="The Church of God footer logo" width={1032} height={201} className="h-auto w-[min(320px,100%)] object-contain object-left" />
             <p className="mt-5 max-w-sm text-sm leading-6">We are a worldwide church, committed to the truth of God's Word, the power of the Holy Spirit, and the preaching of the Gospel to every creature.</p>
             <div className="mt-6 flex gap-5">
               {[Facebook, Users, Youtube, Globe2].map((Icon, index) => (
