@@ -120,7 +120,7 @@ export default function Home() {
       <header className="relative z-20 bg-white">
         <div className="container flex h-28 items-center justify-between">
           <a className="flex items-center" href="#">
-            <Image src="/assets/crops/header-logo.png" alt="The Church of God General Headquarters logo" width={522} height={110} className="h-auto w-[300px] object-contain md:w-[330px]" priority />
+            <Image src="/assets/tcog-header-logo-transparent.png" alt="The Church of God General Headquarters logo" width={1032} height={201} className="h-auto w-[300px] object-contain md:w-[330px]" priority />
           </a>
           <nav className="hidden items-center gap-8 lg:flex">
             {nav.map((item, index) => (
