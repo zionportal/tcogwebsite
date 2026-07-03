@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  color: #061b69;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #061b69;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 40px, 1140px);
+  margin-inline: auto;
+}
+
+.serif-title {
+  font-family: var(--font-serif);
+  letter-spacing: 0;
+}
+
+.wave-hero {
+  clip-path: polygon(38% 55%, 53% 50%, 68% 52%, 78% 49%, 88% 40%, 100% 21%, 100% 100%, 38% 100%);
+}
+
+.wave-red {
+  clip-path: polygon(36% 62%, 49% 55%, 65% 57%, 78% 53%, 88% 43%, 100% 22%, 100% 40%, 88% 55%, 78% 65%, 64% 70%, 50% 68%, 36% 78%);
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 28px, 1140px);
+  }
+
+  .wave-hero,
+  .wave-red {
+    clip-path: none;
+  }
+
+  .serif-title {
+    overflow-wrap: normal;
+  }
+}
