@@ -10,3 +10,4 @@
   - `public/assets/tcog-footer-logo-transparent.png`
 - Updated the site header to use the clean transparent header logo.
 - Applied responsive logo sizing, removed `Ministries` and `Resources` from the header menu, added the white transparent footer logo, and added low-token agent instructions for OpenCode and ChatGPT.
+- Adjusted only the hero section to better match the supplied mockup: three-line desktop headline rhythm, shorter hero height, wider image area, lower/right-shifted red and purple wave, and closer stat-card overlap.

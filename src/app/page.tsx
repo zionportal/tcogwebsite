@@ -140,16 +140,16 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative min-h-[610px] bg-white">
+      <section className="relative min-h-[540px] bg-white">
         <div className="absolute inset-y-0 right-0 hidden w-[64%] md:block">
           <Image src="/assets/crops/hero-scene.png" alt="Church family looking across a sunrise mountain valley" fill className="object-cover object-center" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent" />
         </div>
         <div className="wave-red absolute inset-0 hidden bg-redwave md:block" />
         <div className="wave-hero absolute inset-0 hidden bg-gradient-to-r from-navy via-purplewave to-deep md:block" />
-        <div className="container relative z-10 grid min-h-[610px] items-center md:grid-cols-[0.42fr_0.58fr]">
-          <div className="py-16 md:py-0">
-            <h1 className="serif-title max-w-full text-[43px] font-bold uppercase leading-[0.98] text-navy sm:text-[52px] md:text-[70px]">
+        <div className="container relative z-10 grid min-h-[540px] items-center md:grid-cols-[0.42fr_0.58fr]">
+          <div className="py-14 md:py-0">
+            <h1 className="serif-title max-w-full text-[43px] font-bold uppercase leading-[0.98] text-navy sm:text-[52px] md:text-[54px] xl:text-[58px]">
               One Faith.
               <br />
               One Family.
@@ -157,7 +157,7 @@ export default function Home() {
               One Mission.
             </h1>
             <div className="mt-6 h-1 w-10 bg-gold" />
-            <p className="mt-6 max-w-[420px] text-base font-semibold leading-8 text-navy sm:text-lg">
+            <p className="mt-6 max-w-[390px] text-base font-semibold leading-8 text-navy">
               We are a worldwide church, committed to the truth of God's Word, the power of the Holy Spirit, and the preaching of the Gospel to every creature.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-30 pb-16 md:-mt-24">
+      <section className="relative z-30 pb-16 md:-mt-16">
         <div className="container grid gap-3 md:grid-cols-4">
           {stats.map(({ icon: Icon, value, label, sub }) => (
             <div key={label} className="rounded-lg bg-white px-8 py-8 text-center shadow-soft">
