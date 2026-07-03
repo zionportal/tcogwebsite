@@ -18,3 +18,4 @@
 - Created favicon assets from `tcog-profile.png` and wired them into Next metadata.
 - Replaced visible site logos with brand-only transparent logo variants that remove `General Headquarters` and the tagline.
 - Swapped the media and text column order in the About and impact sections.
+- Replaced the mission section with a Latest Messages YouTube card section and modal video player.
