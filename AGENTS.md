@@ -36,8 +36,9 @@ Not allowed without David explicitly asking:
 - Global CSS and responsive helpers: `src/app/globals.css`
 - Metadata: `src/app/layout.tsx`
 - Public assets: `public/assets/`
-- Clean header logo: `public/assets/tcog-header-logo-transparent.png`
-- Clean footer logo: `public/assets/tcog-header-logo-transparent-white.png`
+- Brand-only header logo: `public/assets/tcog-logo-transparent-navy.png`
+- Brand-only footer logo: `public/assets/tcog-logo-transparent-white.png`
+- Do not use visible logo assets that say `General Headquarters` or include the `One God • One Faith • One Mind` tagline.
 - Mockup-derived crops: `public/assets/crops/`
 - Design directive: `WEB_DESIGN_DIRECTIVE.md`
 - Change catalog: `CHANGELOG.md`

@@ -28,6 +28,7 @@ Most edits are in:
 
 ## Logo Assets
 
-- Header: `public/assets/tcog-header-logo-transparent.png`
-- Footer/dark background: `public/assets/tcog-header-logo-transparent-white.png`
+- Header: `public/assets/tcog-logo-transparent-navy.png`
+- Footer/dark background: `public/assets/tcog-logo-transparent-white.png`
 - Do not use `tcog-dark-logo.png` directly in the site; it has a baked checkerboard background.
+- Do not use logo variants that say `General Headquarters` or include the `One God • One Faith • One Mind` tagline.

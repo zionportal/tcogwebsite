@@ -16,4 +16,5 @@
 - Added breathing room above the impact stat cards while keeping a lighter hero overlap.
 - Refined the hero ribbon taper to hide the hard left edge and create a more natural downward center swoop.
 - Created favicon assets from `tcog-profile.png` and wired them into Next metadata.
+- Replaced visible site logos with brand-only transparent logo variants that remove `General Headquarters` and the tagline.
 - Swapped the media and text column order in the About and impact sections.
