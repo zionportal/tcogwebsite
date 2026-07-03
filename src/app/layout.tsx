@@ -11,6 +11,13 @@ export const metadata: Metadata = {
     description:
       "One faith. One family. One mission. Connect with The Church of God General Headquarters.",
     images: ["/assets/tcog-website-mock-up.png"]
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" }
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }]
   }
 };
 
