@@ -14,3 +14,4 @@
 - Shrank the hero ribbon by tightening the red and purple wave clip paths while preserving the locked hero layout.
 - Reduced the hero ribbon by another 85% so it reads as a thin lower wave instead of a large block.
 - Added breathing room above the impact stat cards while keeping a lighter hero overlap.
+- Refined the hero ribbon taper to hide the hard left edge and create a more natural downward center swoop.
