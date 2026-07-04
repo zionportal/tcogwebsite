@@ -13,10 +13,10 @@ import {
   Music,
   Phone,
   Shield,
+  Star,
   Users,
   Youtube
 } from "lucide-react";
-import { LatestMessages } from "./latest-messages";
 
 const nav = ["Home", "About", "Churches", "Events", "Contact"];
 
@@ -25,6 +25,12 @@ const stats = [
   { icon: Users, value: "15,000+", label: "Members", sub: "Worshipping Together" },
   { icon: Globe2, value: "38", label: "Communities", sub: "Reached" },
   { icon: Shield, value: "10+", label: "Years", sub: "of Faithful Service" }
+];
+
+const values = [
+  { icon: Crown, title: "Faithful", body: "Anchored in God's truth and unwavering in our faith." },
+  { icon: Users, title: "United", body: "We are better together as the Body of Christ." },
+  { icon: Star, title: "Governed", body: "Led by Christ our King under God's divine authority." }
 ];
 
 const ministries = [
@@ -179,7 +185,37 @@ export default function Home() {
         </div>
       </section>
 
-      <LatestMessages />
+      <section id="about" className="py-10 md:py-16">
+        <div className="container grid items-center gap-16 md:grid-cols-[0.64fr_0.36fr]">
+          <div className="relative pb-0 md:pb-24">
+            <Image src="/assets/crops/bible-scene.png" alt="Open Bible on a table at sunrise" width={872} height={340} className="h-[360px] w-full rounded-xl object-cover shadow-soft" />
+            <div className="mt-5 grid gap-6 rounded-xl bg-white px-7 py-8 shadow-soft md:absolute md:bottom-0 md:left-[-32px] md:right-[-18px] md:mt-0 md:grid-cols-3 md:px-10">
+              {values.map(({ icon: Icon, title, body }, index) => (
+                <div key={title} className="flex gap-4">
+                  <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white ${index === 1 ? "bg-purplewave" : index === 2 ? "bg-redwave" : "bg-navy"}`}>
+                    <Icon size={23} fill="currentColor" />
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-extrabold uppercase text-navy">{title}</h3>
+                    <p className="mt-4 text-sm font-semibold leading-6 text-navy">{body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-extrabold uppercase text-gold">Our Purpose</p>
+            <h2 className="serif-title mt-4 max-w-full text-[30px] font-bold leading-tight text-navy sm:text-[34px] md:text-5xl">Our Mission is Changing Lives</h2>
+            <div className="mt-5 h-1 w-10 bg-gold" />
+            <p className="mt-7 max-w-full text-[15px] font-semibold leading-8 text-navy md:text-base">
+              The Church of God General Headquarters is a worldwide church that preaches the Gospel of Jesus Christ, makes disciples, and evangelizes our region with the truth of God's Word and the power of the Holy Spirit.
+            </p>
+            <a className="mt-9 inline-flex min-h-14 items-center justify-between gap-8 rounded bg-navy px-8 text-sm font-bold uppercase text-white shadow-soft" href="#about">
+              Learn More About Us <span className="text-2xl leading-none">›</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section id="ministries" className="border-t border-slate-200 py-16">
         <div className="container grid gap-16 md:grid-cols-[0.31fr_0.69fr]">
