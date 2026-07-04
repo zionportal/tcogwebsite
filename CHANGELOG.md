@@ -23,3 +23,4 @@
 - Replaced the Latest Messages video section with the original mission image and context section.
 - Replaced the Live Your Faith ministries section with a Latest Messages YouTube section.
 - Expanded Latest Messages from three to six YouTube video cards.
+- Tightened the Latest Messages section for laptop/tablet viewports and added a purple Watch Now button.
