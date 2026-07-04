@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {
   Bell,
-  BookOpen,
   Church,
   Crown,
   Facebook,
@@ -10,13 +9,13 @@ import {
   Mail,
   MapPin,
   Menu,
-  Music,
   Phone,
   Shield,
   Star,
   Users,
   Youtube
 } from "lucide-react";
+import { LatestMessages } from "./latest-messages";
 
 const nav = ["Home", "About", "Churches", "Events", "Contact"];
 
@@ -31,45 +30,6 @@ const values = [
   { icon: Crown, title: "Faithful", body: "Anchored in God's truth and unwavering in our faith." },
   { icon: Users, title: "United", body: "We are better together as the Body of Christ." },
   { icon: Star, title: "Governed", body: "Led by Christ our King under God's divine authority." }
-];
-
-const ministries = [
-  {
-    title: "Youth Ministry",
-    body: "Empowering young people to know Christ and live boldly for Him.",
-    image: "/assets/crops/ministry-youth.png",
-    icon: BookOpen
-  },
-  {
-    title: "Worship Ministry",
-    body: "Leading hearts into meaningful worship and encounters.",
-    image: "/assets/crops/ministry-worship.png",
-    icon: Music
-  },
-  {
-    title: "Outreach Ministry",
-    body: "Reaching our communities with the love of Christ in practical ways.",
-    image: "/assets/crops/ministry-outreach.png",
-    icon: Heart
-  },
-  {
-    title: "Women's Ministry",
-    body: "Equipping women to grow in faith and walk in their God-given purpose.",
-    image: "/assets/crops/ministry-women.png",
-    icon: Crown
-  },
-  {
-    title: "Men's Ministry",
-    body: "Building men of integrity who lead, protect, and serve.",
-    image: "/assets/crops/ministry-men.png",
-    icon: Shield
-  },
-  {
-    title: "Missions Ministry",
-    body: "Taking the Gospel to the world and making disciples.",
-    image: "/assets/crops/ministry-missions.png",
-    icon: Globe2
-  }
 ];
 
 const events = [
@@ -217,37 +177,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="ministries" className="border-t border-slate-200 py-16">
-        <div className="container grid gap-16 md:grid-cols-[0.31fr_0.69fr]">
-          <div className="pt-12">
-            <p className="text-sm font-extrabold uppercase text-gold">Live Your Faith</p>
-            <h2 className="serif-title mt-4 text-[34px] font-bold leading-tight text-navy md:text-5xl">Ministries That Make an Impact</h2>
-            <div className="mt-5 h-1 w-10 bg-gold" />
-            <p className="mt-7 text-[15px] font-semibold leading-8 text-navy md:text-base">
-              From youth programs to outreach initiatives, our ministries are here to help every generation grow in faith, build community, and serve with purpose.
-            </p>
-            <a className="mt-9 inline-flex min-h-14 items-center justify-between gap-8 rounded bg-navy px-8 text-sm font-bold uppercase text-white shadow-soft" href="#ministries">
-              Explore Ministries <span className="text-2xl leading-none">›</span>
-            </a>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {ministries.map(({ title, body, image, icon: Icon }, index) => (
-              <article key={title} className="overflow-hidden rounded-lg bg-white shadow-soft">
-                <div className="relative h-36">
-                  <Image src={image} alt={`${title} gathering`} fill className="object-cover" />
-                </div>
-                <div className="relative px-7 pb-7 pt-8">
-                  <span className={`absolute -top-6 left-6 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white text-white ${index % 3 === 0 ? "bg-purplewave" : "bg-navy"}`}>
-                    <Icon size={22} />
-                  </span>
-                  <h3 className="text-sm font-extrabold uppercase text-navy">{title}</h3>
-                  <p className="mt-4 text-sm font-semibold leading-6 text-navy">{body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LatestMessages />
 
       <section className="bg-navy py-16 text-white">
         <div className="container grid items-center gap-14 lg:grid-cols-[0.48fr_0.52fr]">
