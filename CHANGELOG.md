@@ -22,3 +22,4 @@
 - Restored the Latest Messages section to the prior media-left, text-right visual composition.
 - Replaced the Latest Messages video section with the original mission image and context section.
 - Replaced the Live Your Faith ministries section with a Latest Messages YouTube section.
+- Expanded Latest Messages from three to six YouTube video cards.

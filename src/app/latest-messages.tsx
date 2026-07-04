@@ -28,6 +28,24 @@ const messages: Message[] = [
     videoId: "Y1x93p8GyAE",
     title: "This Sermon Will Change Your Perspective: Why Are You Really a Christian?",
     publishedAt: "Latest Upload"
+  },
+  {
+    id: "keeping-faith",
+    videoId: "6RyMOLPzH4s",
+    title: "Prayer for CPMA October 2024 - Keeping the Faith to be Established",
+    publishedAt: "Prayer Message"
+  },
+  {
+    id: "discipleship-kenosha",
+    videoId: "qb4veYVUGWg",
+    title: "Discover Jesus' Teachings on Discipleship at Kenosha Church This Sunday",
+    publishedAt: "Community Message"
+  },
+  {
+    id: "trust-established",
+    videoId: "4ZGjjEjSv4o",
+    title: "The Church of God Prayer for CPMA Message September 2024 - Trust Established",
+    publishedAt: "Prayer Message"
   }
 ];
 
