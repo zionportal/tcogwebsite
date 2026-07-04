@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarDays, Play, X } from "lucide-react";
+import { Play, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type Message = {
@@ -41,6 +41,7 @@ function getThumbnail(videoId: string) {
 
 export function LatestMessages() {
   const [activeMessage, setActiveMessage] = useState<Message | null>(null);
+  const featuredMessage = messages[0];
 
   useEffect(() => {
     if (!activeMessage) {
@@ -65,25 +66,30 @@ export function LatestMessages() {
   return (
     <section id="about" className="py-10 md:py-16">
       <div className="container grid items-center gap-16 md:grid-cols-[0.64fr_0.36fr]">
-        <div className="grid gap-5 lg:grid-cols-3">
-          {messages.map((message) => (
-            <button key={message.id} type="button" onClick={() => setActiveMessage(message)} className="group overflow-hidden rounded-lg bg-white text-left shadow-soft transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-gold/35">
-              <span className="relative block h-44 overflow-hidden">
-                <img src={getThumbnail(message.videoId)} alt={`${message.title} thumbnail`} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <span className="absolute inset-0 bg-navy/25" />
-                <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-navy shadow-soft transition group-hover:bg-gold group-hover:text-white">
-                  <Play size={28} fill="currentColor" className="ml-1" />
+        <div className="relative pb-0 md:pb-28">
+          <button type="button" onClick={() => setActiveMessage(featuredMessage)} className="group relative block h-[360px] w-full overflow-hidden rounded-xl shadow-soft focus:outline-none focus:ring-4 focus:ring-gold/35" aria-label={`Play ${featuredMessage.title}`}>
+            <img src={getThumbnail(featuredMessage.videoId)} alt={`${featuredMessage.title} thumbnail`} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            <span className="absolute inset-0 bg-gradient-to-t from-navy/65 via-navy/10 to-transparent" />
+            <span className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-navy shadow-soft transition group-hover:bg-gold group-hover:text-white">
+              <Play size={34} fill="currentColor" className="ml-1" />
+            </span>
+          </button>
+          <div className="mt-5 grid gap-5 rounded-xl bg-white px-6 py-7 shadow-soft md:absolute md:bottom-0 md:left-[-40px] md:right-[-24px] md:mt-0 md:grid-cols-3 md:px-8">
+            {messages.map((message) => (
+              <button key={message.id} type="button" onClick={() => setActiveMessage(message)} className="group text-left focus:outline-none focus:ring-4 focus:ring-gold/35">
+                <span className="relative mb-5 block h-28 overflow-hidden rounded-lg">
+                  <img src={getThumbnail(message.videoId)} alt={`${message.title} thumbnail`} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <span className="absolute inset-0 bg-navy/25" />
+                  <span className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy shadow-soft transition group-hover:bg-gold group-hover:text-white">
+                    <Play size={20} fill="currentColor" className="ml-0.5" />
+                  </span>
                 </span>
-              </span>
-              <span className="block px-7 py-7">
-                <span className="mb-4 flex items-center gap-2 text-xs font-extrabold uppercase tracking-wide text-gold">
-                  <CalendarDays size={15} /> {message.publishedAt}
-                </span>
-                <span className="block text-sm font-extrabold uppercase leading-6 text-navy">{message.title}</span>
-                <span className="mt-4 block text-sm font-semibold leading-6 text-navy">{message.description}</span>
-              </span>
-            </button>
-          ))}
+                <span className="block text-xs font-extrabold uppercase tracking-wide text-gold">{message.publishedAt}</span>
+                <span className="mt-3 block text-sm font-extrabold uppercase leading-6 text-navy">{message.title}</span>
+                <span className="mt-3 block text-sm font-semibold leading-6 text-navy">{message.description}</span>
+              </button>
+            ))}
+          </div>
         </div>
         <div>
           <p className="text-sm font-extrabold uppercase text-gold">Latest Messages</p>

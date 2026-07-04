@@ -19,3 +19,4 @@
 - Replaced visible site logos with brand-only transparent logo variants that remove `General Headquarters` and the tagline.
 - Swapped the media and text column order in the About and impact sections.
 - Replaced the mission section with a Latest Messages YouTube card section and modal video player.
+- Restored the Latest Messages section to the prior media-left, text-right visual composition.
